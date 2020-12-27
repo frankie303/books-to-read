@@ -1,5 +1,6 @@
-import React, { createContext, useState } from 'react';
-import { nanoid } from 'nanoid';
+import React, { createContext, useReducer } from 'react';
+import { bookReducer } from '../reducers/bookReducer';
+import { ACTIONTYPE } from '../reducers/bookReducer';
 
 export interface Book {
   title: string;
@@ -9,8 +10,9 @@ export interface Book {
 
 export interface ContextState {
   books: Book[];
-  addBook: (title: string, author: string) => void;
-  removeBook: (id: string) => void;
+  dispatch: React.Dispatch<ACTIONTYPE>;
+  // addBook: (title: string, author: string) => void;
+  // removeBook: (id: string) => void;
 }
 
 export const BookContext = createContext({} as ContextState);
@@ -18,20 +20,10 @@ export const BookContext = createContext({} as ContextState);
 export const BookContextProvider = ({
   children
 }: React.PropsWithChildren<{}>) => {
-  const [books, setBooks] = useState([
-    { title: 'name og the wind', author: 'patrick rothfuss', id: '1' },
-    { title: 'the final empire', author: 'brandon sanderson', id: '2' }
-  ]);
+  const [books, dispatch] = useReducer(bookReducer, []);
 
-  const addBook = (title: string, author: string) => {
-    setBooks([...books, { title: title, author: author, id: nanoid() }]);
-  };
-
-  const removeBook = (id: string) => {
-    setBooks(books.filter(book => book.id !== id));
-  };
   return (
-    <BookContext.Provider value={{ books, addBook, removeBook }}>
+    <BookContext.Provider value={{ books, dispatch }}>
       {children}
     </BookContext.Provider>
   );
