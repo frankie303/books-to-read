@@ -11,8 +11,6 @@ export interface Book {
 export interface ContextState {
   books: Book[];
   dispatch: React.Dispatch<ACTIONTYPE>;
-  // addBook: (title: string, author: string) => void;
-  // removeBook: (id: string) => void;
 }
 
 export const BookContext = createContext({} as ContextState);

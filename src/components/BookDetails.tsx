@@ -6,9 +6,7 @@ export const BookDetails: React.FC<{ book: Book }> = ({ book }) => {
   const { dispatch } = useContext(BookContext);
   return (
     <li
-      onClick={() =>
-        dispatch({ type: 'REMOVE_BOOK', payload: { id: book.id } })
-      }
+      onClick={() => dispatch({ type: 'REMOVE_BOOK', book: { id: book.id } })}
     >
       <div className='title'>{book.title}</div>
       <div className='author'>{book.author}</div>
