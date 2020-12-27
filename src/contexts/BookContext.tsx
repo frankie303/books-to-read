@@ -1,12 +1,14 @@
 import React, { createContext, useState } from 'react';
 import { nanoid } from 'nanoid';
 
-interface ContextState {
-  books: {
-    title: string;
-    author: string;
-    id: string;
-  }[];
+export interface Book {
+  title: string;
+  author: string;
+  id: string;
+}
+
+export interface ContextState {
+  books: Book[];
   addBook: (title: string, author: string) => void;
   removeBook: (id: string) => void;
 }
