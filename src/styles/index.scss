@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/Avenir.otf') format('opentype');
+}
+@font-face {
+  font-family: 'FatFrank-Regular';
+  src: url('fonts/FatFrank-Regular.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  font-family: 'Avenir', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+.App {
+  background-color: #ab9185;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  color: rgb(45, 45, 45);
+  border-radius: 50px;
+  border: 2px solid #878787;
+}
+.navbar {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: #f5c786;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.navbar h1 {
+  margin: 10px 0;
+  font-family: 'FatFrank-Regular', sans-serif, Helvetica;
+  letter-spacing: 2px;
+}
+.book-list {
+  margin: 20px;
+}
+.book-list ul {
+  padding: 0;
+  list-style-type: none;
+}
+.book-list li {
+  background: #3f3f3f;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.book-list li:hover {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.book-list .title {
+  font-weight: bold;
+  color: #eee;
+  font-size: 1.2em;
+}
+.book-list .author {
+  font-size: 0.8em;
+  color: #ddd;
+}
+.empty {
+  margin: 20px;
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+}
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 6px 0;
+  background: white;
+  color: black;
+  border: 0;
+}
+input[type='submit'] {
+  margin: 10px auto;
+  background: #eee;
+  border: 0;
+  padding: 6px 20px;
+  display: block;
+}
+
+div.empty {
+  color: white;
+}
+
+.myButton {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 6px;
+  box-sizing: border-box;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #777777;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 7px 28px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #dfdfdf 25%, #ededed 100%);
+  background-color: #dfdfdf;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
