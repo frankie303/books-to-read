@@ -116,3 +116,15 @@ div.empty {
   position: relative;
   top: 1px;
 }
+
+img.portfolio-link {
+  height: 30px;
+  padding: 10px;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+
+img:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
