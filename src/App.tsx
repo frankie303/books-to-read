@@ -7,7 +7,7 @@ import { PortfolioLink } from './components/PortfolioLink';
 
 function App() {
   return (
-    <div>
+    <>
       <PortfolioLink />
       <div className='App'>
         <BookContextProvider>
@@ -16,7 +16,7 @@ function App() {
           <NewBookForm />
         </BookContextProvider>
       </div>
-    </div>
+    </>
   );
 }
 
