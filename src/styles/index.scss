@@ -128,3 +128,8 @@ img:hover {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
+
+.tooltip-red {
+  --balloon-color: #f5c786;
+  --balloon-text-color: black;
+}

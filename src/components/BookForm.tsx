@@ -18,7 +18,7 @@ export const NewBookForm = () => {
     <form onSubmit={handleSubmit}>
       <input
         type='text'
-        placeholder='book title'
+        placeholder='Book Title'
         value={title}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setTitle(e.target.value)
@@ -27,12 +27,12 @@ export const NewBookForm = () => {
       />
       <input
         type='text'
-        placeholder='author'
+        placeholder='Author'
         value={author}
         onChange={e => setAuthor(e.target.value)}
         required
       />
-      <input type='submit' value='add book' className='myButton' />
+      <input type='submit' value='Add Book' className='myButton' />
     </form>
   );
 };
