@@ -7,16 +7,12 @@ export const PortfolioLink = () => {
       href='https://mertciflikli.com/'
       target='_blank'
       rel='noreferrer'
-      aria-label='Check my portfolio!'
+      aria-label='Check out my portfolio!'
       data-balloon-pos='right'
       className='tooltip-red'
     >
       {' '}
-      <img
-        className='portfolio-link tooltip-slide'
-        src='./images/portfol.png'
-        alt='mert'
-      />
+      <img className='portfolio-link' src='./images/portfol.png' alt='mert' />
     </a>
   );
 };

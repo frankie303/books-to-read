@@ -119,7 +119,6 @@ div.empty {
 
 img.portfolio-link {
   height: 30px;
-  padding: 10px;
   -webkit-transition: -webkit-transform 0.8s ease-in-out;
   transition: transform 0.8s ease-in-out;
 }
@@ -130,6 +129,6 @@ img:hover {
 }
 
 .tooltip-red {
-  --balloon-color: #f5c786;
+  --balloon-color: #cda670;
   --balloon-text-color: black;
 }
